@@ -1,0 +1,158 @@
+{% extends 'Contact/index.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'Contact/style.css' %}"/>
+<!--<link rel="stylesheet" type="text/css" href="{% static 'GovernmentEmployee/css/util.css' %}">-->
+<!--<link rel="stylesheet" type="text/css" href="{% static 'GovernmentEmployee/css/main.css' %}">-->
+<style>
+    #myInput {
+<!--  background-image: url('/css/searchicon.png');-->
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+</style>
+
+<div class="container-fluid">
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+                    <h1 align="center">Contact Information</h1>
+
+					<table id="myTable" class="table table-bordered">
+						<thead>
+							<tr class="table100-head">
+
+<!--                                <th  class="column1">Training Code</th>-->
+                                    <th  class="column2">Name</th>
+                                    <th  class="column3">Nick Name</th>
+                                    <th  class="column4">phone_number</th>
+                                    <th  class="column5" >Email</th>
+                                    <th  class="column6">BirthDay</th>
+                                    <th  class="column7">Gender</th>
+                                    <th  class="column8">BIO</th>
+                                    <th  class="column8">PIC</th>
+							</tr>
+						</thead>
+						<tbody>
+                            {% for contact in object_list %}
+                                  {% if contact.username == user %}
+                                            <tr>
+<!--                                                <td class="column1">{{ book.TrainingCode }}</td>-->
+                                                <td class="column2">{{ contact.name }}</td>
+                                                <td class="column3">{{contact.nickname}}</td>
+                                                <td class="column4">{{contact.phone_number}}</td>
+                                                <td class="column5">{{contact.email}}</td>
+                                                <td class="column6">{{contact.dob}}</td>
+                                                <td class="column7">{{contact.gender}}</td>
+                                                <td class="column8">{{contact.bio}}</td>
+                                                <td class="column9">
+                                                     <div class="col-10 mx-auto col-md-6 py-5">
+                                                            <img src="{{ contact.profile_image.url }}" style="max-height: 90px" alt="">
+                                                     </div>
+<!--                                                    <img class="card-img-top" src="{{ book.picture.url }}" style="max-height: 250px" >-->
+                                                </td>
+
+                                                <td class="column10">
+                                                    <div class="form-group">
+                                                     <a href="../editContact/{{contact.id}}" class="btn btn-warning" id = '{{contact.id}}'>Edit</a>
+                                                    </div>
+                                                </td>
+                                                <td class="column11">
+                                                    <div class="form-group">
+                                                         <a href="../deleteContact/{{contact.id}}" class="btn btn-danger" >Delete</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                  {% endif %}
+                             {% endfor %}
+						</tbody>
+					</table>
+<!--                    <script>-->
+<!--                            function myFunction() {-->
+<!--                              var input, filter, table, tr, td, i, txtValue;-->
+<!--                              input = document.getElementById("myInput");-->
+<!--                              filter = input.value.toUpperCase();-->
+<!--                              table = document.getElementById("myTable");-->
+<!--                              tr = table.getElementsByTagName("tr");-->
+<!--                              for (i = 0; i < tr.length; i++) {-->
+<!--                                td = tr[i].getElementsByTagName("td")[0];-->
+<!--                                if (td) {-->
+<!--                                  txtValue = td.textContent || td.innerText;-->
+<!--                                  if (txtValue.toUpperCase().indexOf(filter) > -1) {-->
+<!--                                    tr[i].style.display = "";-->
+<!--                                  } else {-->
+<!--                                    tr[i].style.display = "none";-->
+<!--                                  }-->
+<!--                                }-->
+<!--                              }-->
+<!--                            }-->
+<!--                    </script>-->
+                    {% if is_paginated %}
+                      <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                          <li class="page-item" >
+                              <a  class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                          </li>
+                        {% else %}
+                          <li class="page-item disabled"><a class="page-link" >Previous</a></li>
+                        {% endif %}
+                        {% for i in paginator.page_range %}
+                          {% if page_obj.number == i %}
+                            <li class="page-item active">
+                                <a class="page-link">{{ i }} <span class="page-link sr-only">(current)</span></a>
+                            </li>
+                          {% else %}
+                            <li class="page-item" ><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                          {% endif %}
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                          <li  class="page-item">
+                              <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                          </li>
+                        {% else %}
+                          <li class="page-item disabled">
+                              <a class="page-link">Next</a>
+                          </li>
+                        {% endif %}
+                      </ul>
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+<!--  <div class="container-fluid">-->
+<!--      <div class="card-columns">-->
+<!--          {% for book in object_list %}-->
+<!--              {% if book.username == user %}-->
+<!--                 <div class="card" style="width: 18rem;">-->
+<!--                        <img class="card-img-top" src="{{ book.picture.url }}">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">{{ book.TrainingName }}</h5>-->
+<!--                            <p class="card-text">{{ book.TrainingName }}</p>-->
+<!--                            <div class="card-footer bg-transparent border-dark">-->
+<!--                                  <p class="card-title">{{book.TrainingStartDate}}</p>-->
+<!--                                  <p class="card-title">{{book.TrainingDuration}}</p>-->
+
+<!--                                  <center>-->
+<!--                                     <a href="../editTraining/{{book.id}}" class="btn btn-warning" id = '{{book.id}}'>edit</a>-->
+<!--                                     <a href="../deleteTraining/{{book.id}}" class="btn btn-danger" >delete</a>-->
+<!--                                  </center>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                 </div>-->
+<!--              {% endif %}-->
+<!--          {% endfor %}-->
+<!--      </div>-->
+<!--  </div>-->
+
+
