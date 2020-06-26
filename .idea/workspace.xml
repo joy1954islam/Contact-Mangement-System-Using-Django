@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b0511ff7-5cc2-4891-8792-4ab878104049" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact/static/Contact/blood.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact/static/Contact/contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact/static/Contact/js/data-table/bootstrap-table-export.js" beforeDir="false" afterPath="$PROJECT_DIR$/Contact/static/Contact/js/data-table/bootstrap-table-export.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact/templates/Contact/ContactView.html" beforeDir="false" afterPath="$PROJECT_DIR$/Contact/templates/Contact/ContactView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact/templates/Contact/Create_Contact.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Contact/templates/Contact/Deshboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Contact/templates/Contact/Deshboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact/templates/Contact/data-table.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Contact/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShot/Home.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShot/Settings.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenShot/Settings.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShot/change profile.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShot/password change.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/Contact/templates/Contact/Deshboard.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -157,11 +145,11 @@
         <option value="$PROJECT_DIR$/Contact/templates/Contact/Contact_Confirm_Delete.html" />
         <option value="$PROJECT_DIR$/Social_Apps/views.py" />
         <option value="$PROJECT_DIR$/Contact/templates/Contact/index.html" />
-        <option value="$PROJECT_DIR$/Contact/templates/Contact/Deshboard.html" />
         <option value="$PROJECT_DIR$/Contact/views.py" />
         <option value="$PROJECT_DIR$/Contact/static/Contact/js/data-table/bootstrap-table-export.js" />
         <option value="$PROJECT_DIR$/Contact/templates/Contact/data-table.html" />
         <option value="$PROJECT_DIR$/Contact/templates/Contact/ContactView.html" />
+        <option value="$PROJECT_DIR$/Contact/templates/Contact/Deshboard.html" />
       </list>
     </option>
   </component>
@@ -257,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592626430622</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Django Social Login">
+      <created>1593138161657</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593138161657</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -570,7 +565,7 @@
     <entry file="file://$PROJECT_DIR$/Contact/templates/Contact/Deshboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
         </state>
       </provider>
     </entry>
