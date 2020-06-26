@@ -30,7 +30,7 @@ class viewContactList(ListView):
     model = Contact
     template_name = 'Contact/ContactView.html'
     context_object_name = 'object_list'
-    paginate_by = 2
+    # paginate_by = 2
 
 
 def deleteContact(request, pk, template_name='Contact/Contact_Confirm_Delete.html'):
